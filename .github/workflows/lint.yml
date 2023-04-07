@@ -30,8 +30,8 @@ jobs:
       - name: Install requirements with
         run: poetry install --with lint
       # install requirements (including dev dependencies)
-      - name: Install requirements only
-        run: poetry install --only lint
+      #- name: Install requirements only
+      #  run: poetry install --only lint
       # run linters
       - name: Run linters
         run: |
