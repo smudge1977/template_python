@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Install Python 3.10 from deadsnakes"
+
+apt-get install -y software-properties-common
+add-apt-repository ppa:deadsnakes/ppa
+apt-get install -y python3.10 python3.10-tk
+
+curl -sSL https://install.python-poetry.org | python3 -
+
+echo "Default python:"
+python3 --version
+echo "Python 3.10"
+python3.10 --version
