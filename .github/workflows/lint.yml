@@ -27,8 +27,10 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'poetry'
+      - name: Install requirements with
+        run: poetry install --with lint
       # install requirements (including dev dependencies)
-      - name: Install requirements
+      - name: Install requirements only
         run: poetry install --only lint
       # run linters
       - name: Run linters
