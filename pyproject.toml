@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Keith Marston <kmarston@asl-control.co.uk>"]
 readme = "README.md"
-packages = [{include = "example_app"}]
+# packages = [{include = "src/example_app"}]
 
 homepage = "https://github.com/smudge1977/template_python"
 repository = "https://github.com/smudge1977/template_python"
@@ -23,6 +23,12 @@ isort = "^5.12.0"
 black = "^23.3.0"
 flake8 = "^6.0.0"
 mypy = "^1.2.0"
+
+
+[tool.poetry.group.test.dependencies]
+respx = "^0.20.1"
+pytest-asyncio = "^0.21.0"
+trio = "^0.22.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -55,3 +61,7 @@ warn_return_any = false
 warn_unreachable = true
 # Misc
 pretty = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider" # deactivating pytest caching.
