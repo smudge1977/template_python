@@ -1,0 +1,23 @@
+site_name: Python Project Keith
+
+theme:
+  name: "material"
+
+plugins:
+- search:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [src]
+
+nav:
+  - Index Page: index.md
+  - Tutorials: tutorials.md
+  - How-To-Guides: how-to-guides.md
+  - Reference: reference.md
+  - Explanation: explanation.md
+
+repo_url: https://github.com/smudge1977/template_python
+
+# to navigate with `/site` content correctly
+use_directory_urls: false
